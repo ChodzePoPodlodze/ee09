@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta title="Stacja paliw"
+     >
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styl3.css">
+    <script>
+function kutas()
+{
+    var a=document.getElementById("paliwo").value;
+    var b=document.getElementById("litry").value;
+    var c;
+    a=parseFloat(a);
+    b=parseFloat(b);
+    
+    if(a == "" || b=="" || b<0 || a<0 || a>2){
+        //alert("nie podales pelnych danych")
+        c=0;
+        document.getElementById("wynik").innerHTML=c+"zl";
+    }
+    if(a==1 ){
+        c=4*b;
+        document.getElementById("wynik").innerHTML=  c +"zl";
+    }
+    if(a==2 ){
+        c=3.5*b;
+        document.getElementById("wynik").innerHTML=  c +"zl";
+    }
+    
+    
+}
+
+    </script>
+</head>
+
+<body>
+    
+<div id=baner-lewy>
+    <h1>
+        Stacja Paliw
+    </h1>
+</div>
+
+<div id=baner-prawy>
+    <a href="stacja.html">
+        <img src="home.png">
+    </a>
+    <a href="obliczenia.html">
+        <img src="znak.png">
+    </a>
+</div>
+<div id=blok-glowny>
+    <h3>Oblicz koszt paliwa</h3>
+    <br>
+    <br>
+    rodzaj paliwa 1-benzyna 2-olej napedowy
+    <br>
+<input type="number" id="paliwo">
+    <br>
+    ile litrow
+    <br>
+    <input type="number" id="litry">
+    <br>
+    <button onclick="kutas()">oblicz</button>
+    <div id="wynik"></div>
+</div>
+<div id=block-lewy>
+    <a href="kwerendy.txt">Pobierz kwerendy</a>
+</div>
+<div id=block-prawy><img src="samochod.png" alt="samochód"></div>
+
+<div id=footer>Strone Opracował zarzyganiec2115</div>
+
+</body>
+
+
+
+
+
+</html>
